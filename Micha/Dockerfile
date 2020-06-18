@@ -12,8 +12,4 @@ RUN apt-get install apache2
 
  
 
-ADD ./my-project /var/www/html
-
-CMD ["apachectl", "start"]
-
 WORKDIR /var
