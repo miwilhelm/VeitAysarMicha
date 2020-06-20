@@ -8,9 +8,8 @@ RUN apt-get install -y apache2
 
 #VOLUME /c/xampp/htdocs/GitDockerProjekt:/var/www/html
 #ADD https://github.com/stillerndenacht/GitDockerProjekt/blob/master/index_v.php /var/www/html
-RUN cd /var/www/gitphp
-RUN git clone https://github.com/stillerndenacht/GitDockerProjekt.git
-CMD ["apache2ctl", "start"]
+RUN cd /var/www/ && mkdir gitphp && git clone https://github.com/stillerndenacht/GitDockerProjekt.git .
+RUN ["apache2ctl", "start"]
 #CMD ["systemctl", "start apache2"]
 CMD ["git pull", "origin master"]
 #CMD ["cd", ""]
