@@ -11,8 +11,8 @@ RUN apt-get install -y apache2
 RUN cd /var/www/ \ 
 mkdir gitphp \ 
 git clone https://github.com/stillerndenacht/GitDockerProjekt.git .
-RUN ["apache2ctl", "start"]
+RUN ["apache2ctl start"]
 #CMD ["systemctl", "start apache2"]
-CMD ["git pull", "origin master"]
+CMD ["cd /var/www/gitphp", "git pull origin master"]
 #CMD ["cd", ""]
 WORKDIR /var
