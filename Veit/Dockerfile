@@ -13,6 +13,6 @@ mkdir gitphp \
 git clone https://github.com/stillerndenacht/GitDockerProjekt.git .
 
 #CMD ["systemctl", "start apache2"]
-CMD ["cd /var/www/gitphp", "git pull origin master"]
+#CMD ["cd /var/www/gitphp", "git pull origin master"]
 #CMD ["cd", ""]
 WORKDIR /var
