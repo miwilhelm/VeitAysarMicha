@@ -11,6 +11,7 @@ RUN apache2ctl start
 #ADD https://github.com/stillerndenacht/GitDockerProjekt/blob/master/index_v.php /var/www/html
 RUN cd /var/www/ \ 
 mkdir gitphp \ 
+cd gitphp \
 git clone https://github.com/stillerndenacht/GitDockerProjekt.git .
 
 #CMD ["systemctl", "start apache2"]
